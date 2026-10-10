@@ -48,6 +48,10 @@ export const Navbar = () => {
             <Link to="/mylist" className={`transition-colors hover:text-white ${isActive('/mylist') ? 'text-white font-bold text-[#E50914] border-b-2 border-[#E50914] pb-1' : 'text-[#A3A3A3]'}`}>
               My List
             </Link>
+            <Link to="/admin" className={`transition-colors hover:text-white flex items-center gap-1 ${isActive('/admin') ? 'text-white font-bold text-[#E50914] border-b-2 border-[#E50914] pb-1' : 'text-[#A3A3A3]'}`}>
+              <span className="material-symbols-outlined text-[16px]">admin_panel_settings</span>
+              Admin
+            </Link>
           </nav>
         </div>
 
@@ -93,6 +97,14 @@ export const Navbar = () => {
                     <p className="font-bold text-white truncate">{user.name}</p>
                     <p className="text-xs text-[#A3A3A3] truncate">{user.email}</p>
                   </div>
+                  <Link 
+                    to="/admin" 
+                    className="flex items-center gap-2 px-4 py-2.5 text-white hover:bg-[#e50914]/20 hover:text-[#e50914] transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <span className="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+                    Admin Studio
+                  </Link>
                   <Link 
                     to="/profile" 
                     className="flex items-center gap-2 px-4 py-2.5 text-white hover:bg-[#e50914]/20 hover:text-[#e50914] transition-colors"

@@ -14,6 +14,7 @@ import { MyListPage } from './pages/MyListPage';
 import { SearchPage } from './pages/SearchPage';
 import { ProfilePage } from './pages/ProfilePage';
 import { VideoPlayerPage } from './pages/VideoPlayerPage';
+import { AdminPage } from './pages/AdminPage';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -31,6 +32,7 @@ const AppLayout = () => {
         <Route path="/mylist" element={<MyListPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="/player/:id" element={<VideoPlayerPage />} />
       </Routes>
 
